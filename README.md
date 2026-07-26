@@ -8,6 +8,7 @@ IT consultancy company.
 - Custom software development
 - Web and mobile applications
 - IT consultancy and digital transformation
+- Digital marketing, advertising, and creative services
 - Data, reporting, and systems integration
 - Managed application support
 - MCEMPC Loan Management System (in development)

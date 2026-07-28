@@ -12,6 +12,7 @@ IT consultancy company.
 - Data, reporting, and systems integration
 - Managed application support
 - MCEMPC Loan Management System (in development)
+- VN RetailHub POS & Inventory System (available for a ₱20,000 one-time purchase)
 
 ## Local preview
 

@@ -1,10 +1,14 @@
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const navigation = document.querySelector("[data-nav]");
+const menuLinks = [...document.querySelectorAll(".site-nav a")];
 const navigationLinks = [...document.querySelectorAll(".site-nav a[href^='#']")];
 const sections = [...document.querySelectorAll("main section[id]")];
 const reveals = [...document.querySelectorAll(".reveal")];
 const year = document.querySelector("[data-year]");
+const productFilters = [...document.querySelectorAll("[data-product-filter]")];
+const productCards = [...document.querySelectorAll("[data-product-card]")];
+const productCount = document.querySelector("[data-product-count]");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -30,7 +34,7 @@ menuToggle?.addEventListener("click", () => {
   menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
 });
 
-navigationLinks.forEach((link) => link.addEventListener("click", closeMenu));
+menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -75,6 +79,30 @@ const activeSectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => activeSectionObserver.observe(section));
+
+productFilters.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedCategory = button.dataset.productFilter;
+    let visibleProducts = 0;
+
+    productFilters.forEach((filter) => {
+      const isActive = filter === button;
+      filter.classList.toggle("active", isActive);
+      filter.setAttribute("aria-pressed", String(isActive));
+    });
+
+    productCards.forEach((card) => {
+      const isVisible =
+        selectedCategory === "all" || card.dataset.category === selectedCategory;
+      card.hidden = !isVisible;
+      if (isVisible) visibleProducts += 1;
+    });
+
+    if (productCount) {
+      productCount.textContent = String(visibleProducts);
+    }
+  });
+});
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(

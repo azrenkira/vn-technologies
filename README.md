@@ -11,8 +11,11 @@ IT consultancy company.
 - Digital marketing, advertising, and creative services
 - Data, reporting, and systems integration
 - Managed application support
+- Finished-products catalog organized by medical, commercial, government, and
+  education sectors
 - MCEMPC Loan Management System (in development)
 - VN RetailHub POS & Inventory System (available for a ₱20,000 one-time purchase)
+- TalaVet Veterinary Services Management with Inventory
 
 ## Local preview
 

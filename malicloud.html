@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MaliCloud is VN Technologies' planned private, offline-capable edge platform for resilient local applications, document storage, backups, and AI services." />
+    <meta name="theme-color" content="#061326" />
+    <meta property="og:title" content="MaliCloud | VN Technologies" />
+    <meta property="og:description" content="Small cloud. Serious resilience. Discover VN Technologies' future private AI and local operations-continuity platform." />
+    <meta property="og:type" content="website" />
+    <title>MaliCloud | Private AI & Resilient Local Computing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <style>
+      .malicloud-page main { overflow: hidden; }
+      .mc-hero { position: relative; min-height: 760px; display: flex; align-items: center; padding: 150px 0 100px; background: radial-gradient(circle at 80% 32%, rgba(34,211,238,.12), transparent 32%), linear-gradient(145deg,#061326,#04101f 72%); }
+      .mc-hero-grid { position:absolute; inset:0; opacity:.28; background-image:linear-gradient(rgba(169,184,204,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(169,184,204,.035) 1px,transparent 1px); background-size:70px 70px; }
+      .mc-hero-layout { position:relative; z-index:2; display:grid; grid-template-columns:1.05fr .95fr; gap:72px; align-items:center; }
+      .mc-hero h1 { margin:20px 0 24px; font-size:clamp(3rem,5vw,4.8rem); line-height:1.02; letter-spacing:-.052em; }
+      .mc-hero h1 span { display:block; color:#67e8f9; }
+      .mc-lead { max-width:680px; color:#b8c7d9; font-size:1.04rem; line-height:1.75; }
+      .mc-badge { display:inline-flex; margin-top:26px; padding:9px 13px; border:1px solid rgba(34,211,238,.35); border-radius:999px; color:#67e8f9; background:rgba(34,211,238,.06); font-size:.7rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+      .mc-console { border:1px solid rgba(103,232,249,.2); border-radius:20px; background:rgba(7,23,43,.88); box-shadow:0 30px 80px rgba(0,0,0,.28); overflow:hidden; }
+      .mc-console-head { display:flex; justify-content:space-between; padding:17px 20px; border-bottom:1px solid rgba(169,184,204,.16); color:#8ca0b8; font:600 .65rem ui-monospace,monospace; }
+      .mc-console-head strong { color:#67e8f9; }
+      .mc-console-body { padding:25px; }
+      .mc-status { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+      .mc-status div { padding:17px; border:1px solid rgba(169,184,204,.13); border-radius:12px; background:rgba(255,255,255,.025); }
+      .mc-status small { display:block; margin-bottom:7px; color:#8ca0b8; font-size:.61rem; letter-spacing:.08em; }
+      .mc-status strong { font-size:.92rem; }
+      .mc-status .ok { color:#67e8f9; }
+      .mc-nodes { margin-top:17px; padding:18px; border:1px solid rgba(169,184,204,.13); border-radius:12px; }
+      .mc-node { display:flex; align-items:center; justify-content:space-between; padding:11px 0; border-bottom:1px solid rgba(169,184,204,.1); color:#b8c7d9; font-size:.74rem; }
+      .mc-node:last-child { border-bottom:0; }
+      .mc-dot { width:7px; height:7px; display:inline-block; margin-right:8px; border-radius:50%; background:#22d3ee; box-shadow:0 0 10px #22d3ee; }
+      .mc-section { padding:105px 0; }
+      .mc-section.alt { background:#04101f; }
+      .mc-heading { display:grid; grid-template-columns:1.15fr .85fr; gap:60px; margin-bottom:50px; }
+      .mc-heading h2 { margin:12px 0 0; font-size:clamp(2.2rem,4vw,3.5rem); line-height:1.08; letter-spacing:-.04em; }
+      .mc-heading p { margin:0; color:#8ca0b8; line-height:1.75; }
+      .mc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+      .mc-card { padding:28px; border:1px solid rgba(169,184,204,.15); border-radius:16px; background:rgba(10,27,51,.78); }
+      .mc-card span { color:#67e8f9; font:700 .64rem ui-monospace,monospace; letter-spacing:.08em; }
+      .mc-card h3 { margin:16px 0 11px; font-size:1.15rem; }
+      .mc-card p { margin:0; color:#8ca0b8; font-size:.83rem; line-height:1.7; }
+      .mc-flow { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; overflow:hidden; border:1px solid rgba(169,184,204,.16); border-radius:16px; background:rgba(169,184,204,.16); }
+      .mc-flow div { padding:28px; background:#08182d; }
+      .mc-flow span { color:#22d3ee; font:700 .65rem ui-monospace,monospace; }
+      .mc-flow h3 { margin:13px 0 9px; font-size:1rem; }
+      .mc-flow p { margin:0; color:#8ca0b8; font-size:.78rem; line-height:1.65; }
+      .mc-use-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+      .mc-use { padding:30px; border:1px solid rgba(169,184,204,.14); border-radius:16px; background:linear-gradient(145deg,rgba(34,211,238,.05),rgba(10,27,51,.78)); }
+      .mc-use h3 { margin:0 0 10px; }
+      .mc-use p { margin:0; color:#8ca0b8; line-height:1.7; }
+      .mc-roadmap { display:grid; gap:14px; }
+      .mc-phase { display:grid; grid-template-columns:110px 1fr; gap:25px; padding:24px; border:1px solid rgba(169,184,204,.14); border-radius:14px; background:rgba(10,27,51,.72); }
+      .mc-phase strong { color:#67e8f9; }
+      .mc-phase h3 { margin:0 0 8px; }
+      .mc-phase p { margin:0; color:#8ca0b8; line-height:1.65; }
+      .mc-note { margin-top:28px; padding:18px 20px; border-left:3px solid #22d3ee; background:rgba(34,211,238,.055); color:#b8c7d9; line-height:1.65; }
+      .mc-cta { padding:90px 0; background:radial-gradient(circle at 80% 50%,rgba(34,211,238,.1),transparent 32%),#04101f; }
+      .mc-cta-inner { display:flex; justify-content:space-between; align-items:center; gap:40px; }
+      .mc-cta h2 { max-width:720px; margin:10px 0 0; font-size:clamp(2rem,4vw,3.2rem); letter-spacing:-.04em; }
+      @media (max-width:900px){.mc-hero-layout,.mc-heading{grid-template-columns:1fr}.mc-grid{grid-template-columns:1fr 1fr}.mc-flow{grid-template-columns:1fr 1fr}.mc-hero{padding-top:125px}.mc-cta-inner{align-items:flex-start;flex-direction:column}}
+      @media (max-width:620px){.mc-grid,.mc-use-grid,.mc-flow{grid-template-columns:1fr}.mc-status{grid-template-columns:1fr}.mc-phase{grid-template-columns:1fr}.mc-hero h1{font-size:2.75rem}}
+    </style>
+  </head>
+  <body class="malicloud-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header scrolled" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="index.html#home" aria-label="VN Technologies home"><span class="brand-logo" aria-hidden="true"></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation" data-menu-toggle><span></span><span></span><span></span></button>
+        <nav id="site-navigation" class="site-nav" aria-label="Main navigation" data-nav>
+          <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a class="active" href="malicloud.html" aria-current="page">MaliCloud</a><a href="products.html">Products</a><a href="index.html#contact">Contact</a><a class="nav-cta" href="index.html#contact">Start a project</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="mc-hero">
+        <div class="mc-hero-grid" aria-hidden="true"></div>
+        <div class="container mc-hero-layout">
+          <div class="reveal">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>Future service by VN Technologies</div>
+            <h1>Small cloud. <span>Serious resilience.</span></h1>
+            <p class="mc-lead">MaliCloud is a planned private, offline-capable edge platform that will connect an organization’s existing computers into a resilient local cloud—keeping essential applications, documents, backups, and private AI services available during Internet outages and individual device failures.</p>
+            <span class="mc-badge">Concept &amp; development roadmap</span>
+            <div class="hero-actions"><a class="button button-primary" href="#capabilities">Explore the concept <span aria-hidden="true">↓</span></a><a class="button button-secondary" href="index.html#contact">Discuss a pilot</a></div>
+          </div>
+          <div class="mc-console reveal" aria-label="Conceptual MaliCloud system dashboard">
+            <div class="mc-console-head"><span>MALICLOUD / LOCAL CONTROL</span><strong>OPERATIONAL</strong></div>
+            <div class="mc-console-body">
+              <div class="mc-status"><div><small>INTERNET</small><strong>Offline</strong></div><div><small>LOCAL SERVICES</small><strong class="ok">Available</strong></div><div><small>NODES ONLINE</small><strong>5 of 6</strong></div><div><small>DOCUMENTS</small><strong class="ok">Replicated</strong></div></div>
+              <div class="mc-nodes"><div class="mc-node"><span><i class="mc-dot"></i>Office-PC-01</span><strong>Coordinator</strong></div><div class="mc-node"><span><i class="mc-dot"></i>Mini-Server</span><strong>AI + Storage</strong></div><div class="mc-node"><span><i class="mc-dot"></i>Laptop-02</span><strong>Standby</strong></div><div class="mc-node"><span><i class="mc-dot"></i>Desktop-04</span><strong>Replica</strong></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="capabilities" class="mc-section">
+        <div class="container"><div class="mc-heading reveal"><div><span class="section-kicker">The opportunity</span><h2>Local infrastructure designed to keep organizations moving.</h2></div><p>Many small organizations depend on one office server, cloud-connected tools, and unstable Internet. MaliCloud is being conceived as an operations-continuity layer that uses existing hardware intelligently instead of requiring enterprise-scale infrastructure.</p></div>
+          <div class="mc-grid">
+            <article class="mc-card reveal"><span>01 / LOCAL CLOUD</span><h3>Existing-device pooling</h3><p>Authorized desktops, laptops, and optional mini-servers contribute storage and computing capacity to one managed local environment.</p></article>
+            <article class="mc-card reveal"><span>02 / CONTINUITY</span><h3>Offline-first operations</h3><p>Selected applications and services continue working on the local network even when the Internet connection is unavailable.</p></article>
+            <article class="mc-card reveal"><span>03 / PRIVATE AI</span><h3>On-premise intelligence</h3><p>Approved documents and internal workflows can be supported by private AI services running within the organization’s own infrastructure.</p></article>
+            <article class="mc-card reveal"><span>04 / RESILIENCE</span><h3>Automatic failover</h3><p>If a primary node becomes unavailable, an eligible standby node can assume essential coordination and service responsibilities.</p></article>
+            <article class="mc-card reveal"><span>05 / DATA</span><h3>Replicated document vault</h3><p>Critical files can be encrypted, verified, and maintained across multiple authorized devices to reduce single-device risk.</p></article>
+            <article class="mc-card reveal"><span>06 / SYNCHRONIZATION</span><h3>Cloud when available</h3><p>Local work can continue offline and synchronize with approved remote services when a dependable connection returns.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="mc-section alt">
+        <div class="container"><div class="mc-heading reveal"><div><span class="section-kicker">How it is envisioned</span><h2>A managed grid that stays simple for the organization using it.</h2></div><p>The platform is intended to hide distributed-systems complexity behind a clear control dashboard, approved workloads, automated health checks, and straightforward installation.</p></div>
+          <div class="mc-flow reveal"><div><span>STEP 01</span><h3>Discover</h3><p>Approved devices find the MaliCloud control plane on the local network.</p></div><div><span>STEP 02</span><h3>Enroll</h3><p>An administrator verifies each device and assigns its permitted role.</p></div><div><span>STEP 03</span><h3>Coordinate</h3><p>The system monitors capacity, availability, storage, and service health.</p></div><div><span>STEP 04</span><h3>Recover</h3><p>Replicas and standby nodes help restore essential services after a failure.</p></div></div>
+        </div>
+      </section>
+      <section class="mc-section">
+        <div class="container"><div class="mc-heading reveal"><div><span class="section-kicker">Potential users</span><h2>Built for environments where downtime has real consequences.</h2></div><p>MaliCloud is initially envisioned for smaller organizations that need privacy, continuity, and local control but cannot justify complex enterprise infrastructure.</p></div>
+          <div class="mc-use-grid"><article class="mc-use reveal"><h3>Local government and disaster response</h3><p>Maintain access to dispatch records, forms, reference documents, and selected internal services during connectivity interruptions.</p></article><article class="mc-use reveal"><h3>Schools and colleges</h3><p>Support local document access, administrative applications, learning resources, and private institutional AI tools.</p></article><article class="mc-use reveal"><h3>Clinics and cooperatives</h3><p>Keep essential records and approved workflows available locally while protecting sensitive operational information.</p></article><article class="mc-use reveal"><h3>Hotels, retailers, and provincial businesses</h3><p>Reduce disruption to internal systems, shared documents, reporting, and site-level operations when external connectivity is unreliable.</p></article></div>
+        </div>
+      </section>
+      <section class="mc-section alt">
+        <div class="container"><div class="mc-heading reveal"><div><span class="section-kicker">Development direction</span><h2>Beginning with a focused continuity prototype.</h2></div><p>The first objective is not to replace global cloud platforms. It is to prove that ordinary local hardware can provide useful resilience, private AI access, replicated files, and controlled service recovery.</p></div>
+          <div class="mc-roadmap"><div class="mc-phase reveal"><strong>PHASE 01</strong><div><h3>Node monitoring and local control</h3><p>Automatic device discovery, secure enrollment, telemetry, health monitoring, and an operations dashboard.</p></div></div><div class="mc-phase reveal"><strong>PHASE 02</strong><div><h3>Private document assistant</h3><p>Local document ingestion, retrieval, summarization, and question answering without requiring a public AI service.</p></div></div><div class="mc-phase reveal"><strong>PHASE 03</strong><div><h3>Replication and failover</h3><p>Encrypted document replicas, integrity verification, standby coordination, recovery testing, and reconnection synchronization.</p></div></div><div class="mc-phase reveal"><strong>PHASE 04</strong><div><h3>Adaptive workload orchestration</h3><p>Smarter placement of approved workloads based on capacity, reliability, energy state, latency, and service requirements.</p></div></div></div>
+          <p class="mc-note reveal"><strong>Important:</strong> MaliCloud is currently a future-service concept under planning and prototyping. The final capabilities, supported hardware, security architecture, deployment model, pricing, and availability may change as technical validation and pilot testing progress.</p>
+        </div>
+      </section>
+      <section class="mc-cta"><div class="container mc-cta-inner reveal"><div><span class="section-kicker">Interested in the concept?</span><h2>Talk with VN Technologies about a future pilot or operational-continuity use case.</h2></div><a class="button button-primary" href="index.html#contact">Start a conversation <span aria-hidden="true">→</span></a></div></section>
+    </main>
+    <footer><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html#home" aria-label="VN Technologies home"><span class="brand-logo" aria-hidden="true"></span></a><p>Building technology and creative digital solutions that move businesses and communities forward.</p></div><div class="footer-links"><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="malicloud.html">MaliCloud</a><a href="products.html">Products</a><a href="index.html#contact">Contact</a></div><div class="footer-meta"><span>Based in Masbate, Philippines</span><span>© <span data-year></span> VN Technologies</span></div></div></footer>
+  </body>
+</html>

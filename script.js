@@ -2,13 +2,21 @@ const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const navigation = document.querySelector("[data-nav]");
 
-const addMaliCloudLinks = () => {
+const addProductLinks = () => {
   if (navigation && !navigation.querySelector('a[href="malicloud.html"]')) {
     const productsLink = navigation.querySelector('a[href="products.html"]');
     const maliCloudLink = document.createElement("a");
     maliCloudLink.href = "malicloud.html";
     maliCloudLink.textContent = "MaliCloud";
     productsLink?.before(maliCloudLink);
+  }
+
+  if (navigation && !navigation.querySelector('a[href="talavet.html"]')) {
+    const productsLink = navigation.querySelector('a[href="products.html"]');
+    const talaVetLink = document.createElement("a");
+    talaVetLink.href = "talavet.html";
+    talaVetLink.textContent = "TalaVet";
+    productsLink?.before(talaVetLink);
   }
 
   document.querySelectorAll(".footer-links").forEach((footerLinks) => {
@@ -18,6 +26,15 @@ const addMaliCloudLinks = () => {
     maliCloudLink.href = "malicloud.html";
     maliCloudLink.textContent = "MaliCloud";
     productsLink?.before(maliCloudLink);
+  });
+
+  document.querySelectorAll(".footer-links").forEach((footerLinks) => {
+    if (footerLinks.querySelector('a[href="talavet.html"]')) return;
+    const productsLink = footerLinks.querySelector('a[href="products.html"]');
+    const talaVetLink = document.createElement("a");
+    talaVetLink.href = "talavet.html";
+    talaVetLink.textContent = "TalaVet";
+    productsLink?.before(talaVetLink);
   });
 };
 
@@ -61,7 +78,7 @@ const addMaliCloudServiceCard = () => {
   serviceGrid.append(card);
 };
 
-addMaliCloudLinks();
+addProductLinks();
 addMaliCloudServiceCard();
 
 const menuLinks = [...document.querySelectorAll(".site-nav a")];

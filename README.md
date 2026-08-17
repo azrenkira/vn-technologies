@@ -15,7 +15,8 @@ IT consultancy company.
   education sectors
 - MCEMPC Loan Management System (in development)
 - VN RetailHub POS & Inventory System (available for a ₱20,000 one-time purchase)
-- TalaVet Veterinary Services Management with Inventory
+- TalaVet Veterinary Services Management with Inventory, with a dedicated
+  product page covering the Enterprise and LGU editions
 - MaliCloud, a planned private AI and resilient local-computing service for
   offline operations, document replication, failover, and edge deployments
 

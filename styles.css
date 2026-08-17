@@ -2728,6 +2728,28 @@ footer {
   letter-spacing: 0.05em;
 }
 
+.product-logo {
+  width: 82px;
+  height: 82px;
+  margin: 28px 0 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(34, 211, 238, 0.14));
+}
+
+.product-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: var(--cyan-300);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.product-detail-link span { transition: transform 0.2s ease; }
+.product-detail-link:hover span,
+.product-detail-link:focus-visible span { transform: translateX(4px); }
+
 .product-code {
   margin: 27px 0 9px;
   color: var(--slate-400);

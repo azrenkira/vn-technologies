@@ -1,7 +1,13 @@
 # VN Technologies
 
-Corporate website for VN Technologies, a Masbate-based software development and
-IT consultancy company.
+Corporate website for VN Technologies, a Masbate-based, human-led and
+AI-accelerated technology company creating accountable solutions for communities.
+
+## Engineering philosophy
+
+VN Technologies follows [Accountable Vibe Coding](ACCOUNTABLE_VIBE_CODING.md):
+AI may help write the code, but humans must understand it, verify it, maintain
+it, and remain accountable for what it does.
 
 ## Current focus
 
@@ -11,6 +17,9 @@ IT consultancy company.
 - Digital marketing, advertising, and creative services
 - Data, reporting, and systems integration
 - Managed application support
+- Accountable Vibe Coding, with a dedicated public philosophy page and an
+  engineering definition of done
+- i.collect LGU and TalaVet as flagship platforms in active development
 - Finished-products catalog organized by medical, commercial, government, and
   education sectors
 - MCEMPC Loan Management System (in development)
